@@ -48,6 +48,7 @@ namespace autobahn {
     {
         // Bind the handlers we are using
         using websocketpp::lib::placeholders::_1;
+        using websocketpp::lib::placeholders::_2;
         using websocketpp::lib::bind;
         m_client.set_open_handler(bind(&wamp_websocketpp_websocket_transport<Config>::on_ws_open, this, _1));
         m_client.set_close_handler(bind(&wamp_websocketpp_websocket_transport<Config>::on_ws_close, this, _1));
